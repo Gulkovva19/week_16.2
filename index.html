@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Расчет стоимости автомобиля</title>
+		<link rel="stylesheet" href="/styles.css" />
+		<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet" />
+	</head>
+
+	<body>
+		<main class="calc">
+			<div class="container">
+				<form id="form">
+					<div class="heading">
+						<h1 class="heading__title">Калькулятор стоимости автомобиля</h1>
+					</div>
+
+					<div class="calc__section">
+						<label class="checkbox-wrapper title-bold section-title .section-title--vertical-center">
+							<span class="title__inline">Пробег автомобиля:</span>
+							<input type="number" min="0" max="100000" value="100" id="mileage-input" class="title__inline input-short" />
+							<span class="title__inline">км</span>
+						</label>
+						<input type="range" id="mileage-range" class="range-input" min="0" max="100000" value="100" step="100" />
+					</div>
+
+					<div class="calc__section">
+						<h4 class="checkbox-wrapper title-bold section-title">Тип топлива</h4>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1" />
+							<div class="title-lite">Бензин</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1.2" checked />
+							<div class="title-lite">
+								Дизельное топливо
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="fuel" value="1.5" />
+							<div class="title-lite">
+								Электрический
+							</div>
+						</label>
+					</div>
+
+					<div class="calc__section">
+						<label class="checkbox-wrapper title-bold section-title"> Год выпуска автомобиля </label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="age" value="1" checked />
+							<div class="title-lite">До 2017</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="radio" class="radio" name="age" value="1.5" />
+							<div class="title-lite">
+								После 2017
+							</div>
+						</label>
+					</div>
+
+					<div class="calc__section">
+						<label class="checkbox-wrapper title-bold section-title"> Количество лошадиных сил </label>
+						<div class="horsepower-wrapper">
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="1" />
+								<span class="horsepower-radio-fake">100</span>
+							</label>
+
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="1.1" checked/>
+								<span class="horsepower-radio-fake">150</span>
+							</label>
+
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="1.5" />
+								<span class="horsepower-radio-fake">200</span>
+							</label>
+
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="1.7" />
+								<span class="horsepower-radio-fake">250</span>
+							</label>
+
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="2" />
+								<span class="horsepower-radio-fake">300</span>
+							</label>
+
+							<label class="horsepower-label">
+								<input class="horsepower-radio-real" type="radio" name="horsepower" value="2.3" />
+								<span class="horsepower-radio-fake">350</span>
+							</label>
+						</div>
+					</div>
+
+					<div class="calc__section">
+						<label class="checkbox-wrapper title-bold section-title"> Дополнительные опции </label>
+						<label class="radio-wrapper">
+							<input type="checkbox" class="radio" name="seat" value="100000" />
+							<div class="title-lite">
+								Авторегулировка сидений
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="checkbox" class="radio" name="carplay" value="50000" />
+							<div class="title-lite">
+								CarPlay
+							</div>
+						</label>
+						<label class="radio-wrapper">
+							<input type="checkbox" class="radio" name="door" value="150000" />
+							<div class="title-lite">
+								Автодоводчик дверей
+							</div>
+						</label>
+					</div>
+
+					<div class="calc-price">
+						<div class="calc-price-title">Стоимость Автомобиля:</div>
+						<div class="calc-price-value">
+							<span id="total-price">0</span>
+							рублей
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+
+
+		<script src="/index.js"></script>
+	</body>
+</html>
